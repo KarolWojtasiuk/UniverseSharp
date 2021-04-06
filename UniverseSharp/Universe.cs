@@ -1,3 +1,5 @@
+using System.Numerics;
+
 namespace UniverseSharp
 {
     /// <summary>
@@ -10,6 +12,6 @@ namespace UniverseSharp
         /// <para/>
         /// Unit: m³kg⁻¹s⁻²
         /// </summary>
-        public const decimal GravitationalConstant = 6.67408e-11m;
+        public static readonly BigFloat GravitationalConstant = 6.67408e-11m;
     }
 }

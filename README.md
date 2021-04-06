@@ -1,4 +1,5 @@
-# UniverseSharp 
+# UniverseSharp
+
 ![Build badge](https://github.com/KarolWojtasiuk/UniverseSharp/workflows/.NET/badge.svg?branch=master)
 
 Library to facilitate physical calculations e.g. calculating cosmic velocity from given mass and radius.  
@@ -57,3 +58,4 @@ Just run this command.
 ## Built With
 
 * [xUnit](https://github.com/xunit/xunit) - Testing framework
+* [BigFloat](https://github.com/FaustVX/BigFloat) - Arbitrary precision float number support
