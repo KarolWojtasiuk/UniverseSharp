@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniverseSharp", "UniverseSharp\UniverseSharp.csproj", "{7E625925-03F8-4A8C-BAEA-89402F643764}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniverseSharp.Tests", "UniverseSharp.Tests\UniverseSharp.Tests.csproj", "{21894976-153E-4E9D-9C42-37EB38DA7983}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E625925-03F8-4A8C-BAEA-89402F643764}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E625925-03F8-4A8C-BAEA-89402F643764}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E625925-03F8-4A8C-BAEA-89402F643764}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E625925-03F8-4A8C-BAEA-89402F643764}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21894976-153E-4E9D-9C42-37EB38DA7983}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21894976-153E-4E9D-9C42-37EB38DA7983}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21894976-153E-4E9D-9C42-37EB38DA7983}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21894976-153E-4E9D-9C42-37EB38DA7983}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
