@@ -61,5 +61,20 @@ namespace UniverseSharp
                 _mass = value;
             }
         }
+
+
+        /// <summary>
+        /// Represents first cosmic velocity.
+        /// <para/>
+        /// Unit: m/s
+        /// </summary>
+        public BigFloat FirstCosmicVelocity => BigFloat.Sqrt(Universe.GravitationalConstant * Mass / Radius);
+
+        /// <summary>
+        /// Represents second cosmic velocity. Also known as escape velocity.
+        /// <para/>
+        /// Unit: m/s
+        /// </summary>
+        public BigFloat SecondCosmicVelocity => BigFloat.Sqrt(2 * Universe.GravitationalConstant * Mass / Radius);
     }
 }
