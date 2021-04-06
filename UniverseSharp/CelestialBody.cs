@@ -76,5 +76,19 @@ namespace UniverseSharp
         /// Unit: m/s
         /// </summary>
         public BigFloat SecondCosmicVelocity => BigFloat.Sqrt(2 * Universe.GravitationalConstant * Mass / Radius);
+
+        /// <summary>
+        /// Represents body volume.
+        /// <para/>
+        /// Unit: m³
+        /// </summary>
+        public BigFloat Volume => 4m / 3m * (decimal) Math.PI * BigFloat.Pow(Radius, 3);
+
+        /// <summary>
+        /// Represents body density.
+        /// <para/>
+        /// Unit: kg/m³
+        /// </summary>
+        public BigFloat Density => Mass / Volume;
     }
 }
