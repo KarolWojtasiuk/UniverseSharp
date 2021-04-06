@@ -50,5 +50,29 @@ namespace UniverseSharp.Tests
             var body = new CelestialBody(mass, radius);
             Assert.InRange(body.SecondCosmicVelocity, expectedLow, expectedHigh);
         }
+
+        [Theory]
+        [InlineData(5e6, 5.2e20, 5.3e20)]
+        [InlineData(1e30, 4.1e90, 4.2e90)]
+        [InlineData(1e8, 4.1e24, 4.2e24)]
+        [InlineData(7, 1435, 1437)]
+        [InlineData(1, 4.1, 4.3)]
+        public void VolumeTest(BigFloat radius, BigFloat expectedLow, BigFloat expectedHigh)
+        {
+            var body = new CelestialBody(1, radius);
+            Assert.InRange(body.Volume, expectedLow, expectedHigh);
+        }
+
+        [Theory]
+        [InlineData(6e23, 5e6, 1145, 1146)]
+        [InlineData(1e50, 1e30, 2.3e-41, 3.4e-41)]
+        [InlineData(1e20, 1e8, 2.3e-5, 2.4e-5)]
+        [InlineData(1e11, 7, 6.9e7, 7e7)]
+        [InlineData(1, 1, 0.2, 0.3)]
+        public void DensityTest(BigFloat mass, BigFloat radius, BigFloat expectedLow, BigFloat expectedHigh)
+        {
+            var body = new CelestialBody(mass, radius);
+            Assert.InRange(body.Density, expectedLow, expectedHigh);
+        }
     }
 }
