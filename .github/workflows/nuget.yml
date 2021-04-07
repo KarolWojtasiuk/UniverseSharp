@@ -1,0 +1,21 @@
+name: NuGet Publish
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 5.0.201
+      - name: Publish NuGet package
+        uses: rohith/publish-nuget@v2
+        with:
+          PROJECT_FILE_PATH: UniverseSharp/UniverseSharp.csproj
+          PACKAGE_NAME: UniverseSharp
+          NUGET_KEY: ${{secrets.NUGET_KEY}}
