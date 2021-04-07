@@ -94,7 +94,7 @@ namespace UniverseSharp
         /// <summary>
         /// Represents gravitational acceleration on surface of the body.
         /// <para/>
-        /// Unit: m/s
+        /// Unit: m/s²
         /// </summary>
         public BigFloat GravitationalAccelerationOnSurface => CalculateGravitationalAcceleration(Radius);
 
@@ -102,7 +102,7 @@ namespace UniverseSharp
         /// <summary>
         /// Returns gravitational acceleration at a given height from the center of the body.
         /// <para/>
-        /// Unit: m/s
+        /// Unit: m/s²
         /// </summary>
         /// <param name="height">Height in meters from center of the body.</param>
         public BigFloat CalculateGravitationalAcceleration(BigFloat height)

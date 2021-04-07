@@ -6,16 +6,17 @@
         <Title>Universe Sharp</Title>
         <PackageId>UniverseSharp</PackageId>
         <Authors>KarolWojtasiuk</Authors>
-        <Version>1.0.0</Version>
+        <Version>1.0.1</Version>
         <Description>Library to facilitate physical calculations e.g. calculating cosmic velocity from given mass and radius.</Description>
         <PackageProjectUrl>https://github.com/KarolWojtasiuk/UniverseSharp</PackageProjectUrl>
-        <PackageLicenseUrl>https://github.com/KarolWojtasiuk/UniverseSharp/blob/master/LICENSE.md</PackageLicenseUrl>
         <RepositoryUrl>https://github.com/KarolWojtasiuk/UniverseSharp</RepositoryUrl>
         <PackageTags>csharp;dotnet;astronomy;space;gravity;astrophysics;universe;celestial-bodies;planets;nasa-data;gravitational-objects</PackageTags>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="BigFloat" Version="1.2.0" />
+        <PackageReference Include="BigFloat" Version="1.2.0"/>
     </ItemGroup>
 
 </Project>

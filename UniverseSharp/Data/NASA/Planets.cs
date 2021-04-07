@@ -1,8 +1,11 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace UniverseSharp.Data.NASA
 {
     /// <summary>
     /// Source: https://ssd.jpl.nasa.gov/?planet_phys_par
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public static class Planets
     {
         public static readonly CelestialBody Mercury = new(3.30114e23m, 2.4394e6m);
