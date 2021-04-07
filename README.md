@@ -4,14 +4,13 @@
 ![NuGet badge](https://img.shields.io/nuget/v/UniverseSharp?style=for-the-badge)
 ![License](https://img.shields.io/github/license/KarolWojtasiuk/UniverseSharp?style=for-the-badge)
 
-Library to facilitate physical calculations e.g. calculating cosmic velocity from given mass and radius.  
-Project in early development stage.
+Library to facilitate physical calculations e.g. calculating cosmic velocity from given mass and radius.
 
 ## Usage
 
 ### Installing
 
-Library is currently in an early development stage so NuGet package is not available yet.
+`dotnet add package UniverseSharp`
 
 ### Example usage
 
@@ -24,6 +23,7 @@ Console.WriteLine(myPlanet.Density); //6549.586135468951203714934140309657484583
 ```
 
 You can also import `UniverseSharp.Data.NASA` namespace and use predefined objects.
+
 ```csharp
 Console.WriteLine(Planets.Earth.FirstCosmicVelocity); //7909.79026300202504910263375122164
 Console.WriteLine(Planets.Earth.GravitationalAccelerationOnSurface); //9.82023222645293258
