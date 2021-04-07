@@ -1,5 +1,6 @@
 using System;
 using System.Numerics;
+using System.Runtime.InteropServices;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -73,6 +74,40 @@ namespace UniverseSharp.Tests
         {
             var body = new CelestialBody(mass, radius);
             Assert.InRange(body.Density, expectedLow, expectedHigh);
+        }
+
+        [Theory]
+        [InlineData(6e23, 1e5, 4004, 4005)]
+        [InlineData(1e50, 1e20, 0.66, 0.67)]
+        [InlineData(1e20, 5e2, 26696, 26697)]
+        [InlineData(1e11, 2, 1.6, 1.7)]
+        [InlineData(1, -1, 0, 0, true)]
+        public void GravitationalAccelerationTest(BigFloat mass, BigFloat height, BigFloat expectedLow,
+            BigFloat expectedHigh, bool shouldThrow = false)
+        {
+            var body = new CelestialBody(mass, 1);
+            if (shouldThrow)
+            {
+                Assert.ThrowsAny<Exception>(() => body.CalculateGravitationalAcceleration(height));
+            }
+            else
+            {
+                Assert.InRange(body.CalculateGravitationalAcceleration(height), expectedLow,
+                    expectedHigh);
+            }
+        }
+
+        [Theory]
+        [InlineData(6e23, 5e6, 1.6, 1.7)]
+        [InlineData(1e50, 1e30, 6e-21, 7e-21)]
+        [InlineData(1e20, 1e8, 6e-7, 7e-7)]
+        [InlineData(1e11, 7, 0.13, 0.14)]
+        [InlineData(1, 1, 6e-11, 7e-11)]
+        public void GravitationalAccelerationOnSurfaceTest(BigFloat mass, BigFloat radius, BigFloat expectedLow,
+            BigFloat expectedHigh)
+        {
+            var body = new CelestialBody(mass, radius);
+            Assert.InRange(body.GravitationalAccelerationOnSurface, expectedLow, expectedHigh);
         }
     }
 }
