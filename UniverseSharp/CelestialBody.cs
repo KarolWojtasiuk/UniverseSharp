@@ -82,7 +82,7 @@ namespace UniverseSharp
         /// <para/>
         /// Unit: m³
         /// </summary>
-        public BigFloat Volume => 4m / 3m * (decimal) Math.PI * BigFloat.Pow(Radius, 3);
+        public BigFloat Volume => new BigFloat(4) / new BigFloat(3) * Universe.Pi * BigFloat.Pow(Radius, 3);
 
         /// <summary>
         /// Represents body density.
