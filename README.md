@@ -1,4 +1,4 @@
-# UniverseSharp
+# ![Banner](https://i.imgur.com/SKjF89A.jpg)
 
 ![Build badge](https://img.shields.io/github/workflow/status/KarolWojtasiuk/UniverseSharp/.NET/master?style=for-the-badge)
 ![NuGet badge](https://img.shields.io/nuget/v/UniverseSharp?style=for-the-badge)
