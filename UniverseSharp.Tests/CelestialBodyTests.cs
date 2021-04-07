@@ -1,8 +1,6 @@
 using System;
 using System.Numerics;
-using System.Runtime.InteropServices;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace UniverseSharp.Tests
 {

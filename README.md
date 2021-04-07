@@ -14,13 +14,23 @@ Library is currently in an early development stage so NuGet package is not avail
 ### Example usage
 
 ```csharp
-var myPlanet = new CelestialBody(radius: 4.5e6m, mass: 2.5e24m);
-Console.WriteLine(myPlanet.FirstCosmicVelocity); // 6089.18896259775 m/s
-Console.WriteLine(myPlanet.SecondCosmicVelocity); // 8611.41361475829 m/s
-Console.WriteLine(myPlanet.Volume); // 381703507411159485000.0 m³
-Console.WriteLine(myPlanet.Density); // 6549.5861354689506103422990912 kg/m³
-Console.WriteLine(myPlanet.GravitationalAccelerationOnSurface); // 8.239604938271604938271604938 m/s
-Console.WriteLine(myPlanet.CalculateGravitationalAcceleration(height: 5.0e6m)); // 6.67408 m/s
+var myPlanet = new CelestialBody(radius: 4.5e6, mass: 2.5e24);
+Console.WriteLine(myPlanet.FirstCosmicVelocity); //6089.1889625977403445034075310210229350530234828174250100542213675545
+Console.WriteLine(myPlanet.SecondCosmicVelocity); //8611.413614758283000983304784383634439906931315731627144823861947177
+Console.WriteLine(myPlanet.CalculateGravitationalAcceleration(height: 7e6)); //3.405142857142857451352755872914285714285
+Console.WriteLine(myPlanet.Density); //6549.5861354689512037149341403096574845835444909202854993444150023369513416475003
+```
+
+You can also import `UniverseSharp.Data.NASA` namespace and use predefined objects.
+```csharp
+Console.WriteLine(Planets.Earth.FirstCosmicVelocity); //7909.79026300202504910263375122164
+Console.WriteLine(Planets.Earth.GravitationalAccelerationOnSurface); //9.82023222645293258
+
+Console.WriteLine(Planets.Jupiter.Volume); //1431281810739355898836057.6446305537758196646
+Console.WriteLine(Planets.Jupiter.Density); //1326.214715898230640321948098163419896463003
+
+Console.WriteLine(Planets.Mars.SecondCosmicVelocity); //5027.04720184840644701259976144380
+Console.WriteLine(Planets.Mars.Radius); // 3389500
 ```
 
 ### IntelliSense documentation support
