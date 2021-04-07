@@ -1,6 +1,8 @@
 # UniverseSharp
 
-![Build badge](https://github.com/KarolWojtasiuk/UniverseSharp/workflows/.NET/badge.svg?branch=master)
+![Build badge](https://img.shields.io/github/workflow/status/KarolWojtasiuk/UniverseSharp/.NET/master?style=for-the-badge)
+![NuGet badge](https://img.shields.io/nuget/v/UniverseSharp?style=for-the-badge)
+![License](https://img.shields.io/github/license/KarolWojtasiuk/UniverseSharp?style=for-the-badge)
 
 Library to facilitate physical calculations e.g. calculating cosmic velocity from given mass and radius.  
 Project in early development stage.
