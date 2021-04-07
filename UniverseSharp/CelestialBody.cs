@@ -90,5 +90,29 @@ namespace UniverseSharp
         /// Unit: kg/m³
         /// </summary>
         public BigFloat Density => Mass / Volume;
+
+        /// <summary>
+        /// Represents gravitational acceleration on surface of the body.
+        /// <para/>
+        /// Unit: m/s
+        /// </summary>
+        public BigFloat GravitationalAccelerationOnSurface => CalculateGravitationalAcceleration(Radius);
+
+
+        /// <summary>
+        /// Returns gravitational acceleration at a given height from the center of the body.
+        /// <para/>
+        /// Unit: m/s
+        /// </summary>
+        /// <param name="height">Height in meters from center of the body.</param>
+        public BigFloat CalculateGravitationalAcceleration(BigFloat height)
+        {
+            if (height <= 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(height), "Value must be greater than 0.");
+            }
+
+            return Universe.GravitationalConstant * Mass / BigFloat.Pow(height, 2);
+        }
     }
 }
