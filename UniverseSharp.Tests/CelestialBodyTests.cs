@@ -107,5 +107,24 @@ namespace UniverseSharp.Tests
             var body = new CelestialBody(mass, radius);
             Assert.InRange(body.GravitationalAccelerationOnSurface, expectedLow, expectedHigh);
         }
+
+        [Theory]
+        [InlineData(6e23, 5e6, 5e8, 800, 801)]
+        [InlineData(1e50, 1e30, 1e30, 6674e6, 6675e6)]
+        [InlineData(1e20, 1e8, 1e10, 6e-3, 7e-3)]
+        [InlineData(1e11, 7, 1, 46, 47)]
+        [InlineData(1, 1, 1e-6, 66, 67)]
+        public void GravitationalForceTest(BigFloat firstMass, BigFloat secondMass, BigFloat distance,
+            BigFloat expectedLow,
+            BigFloat expectedHigh)
+        {
+            var firstBody = new CelestialBody(firstMass, 1);
+            var secondBody = new CelestialBody(secondMass, 1);
+
+            var force = firstBody.CalculateGravitationalForce(secondBody, distance);
+
+            Assert.Equal(force, secondBody.CalculateGravitationalForce(firstBody, distance));
+            Assert.InRange(force, expectedLow, expectedHigh);
+        }
     }
 }
