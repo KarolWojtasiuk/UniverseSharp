@@ -27,7 +27,7 @@ namespace UniverseSharp
         /// <summary>
         /// Represents celestial body mass.
         /// <para/>
-        /// Unit: kg
+        /// <b>Unit</b>: kg
         /// </summary>
         public BigFloat Mass
         {
@@ -46,7 +46,7 @@ namespace UniverseSharp
         /// <summary>
         /// Represents celestial body radius.
         /// <para/>
-        /// Unit: m
+        /// <b>Unit</b>: m
         /// </summary>
         public BigFloat Radius
         {
@@ -66,35 +66,35 @@ namespace UniverseSharp
         /// <summary>
         /// Represents first cosmic velocity.
         /// <para/>
-        /// Unit: m/s
+        /// <b>Unit</b>: m/s
         /// </summary>
         public BigFloat FirstCosmicVelocity => BigFloat.Sqrt(Universe.GravitationalConstant * Mass / Radius);
 
         /// <summary>
         /// Represents second cosmic velocity. Also known as escape velocity.
         /// <para/>
-        /// Unit: m/s
+        /// <b>Unit</b>: m/s
         /// </summary>
         public BigFloat SecondCosmicVelocity => BigFloat.Sqrt(2 * Universe.GravitationalConstant * Mass / Radius);
 
         /// <summary>
         /// Represents body volume.
         /// <para/>
-        /// Unit: m³
+        /// <b>Unit</b>: m³
         /// </summary>
         public BigFloat Volume => new BigFloat(4) / new BigFloat(3) * Universe.Pi * BigFloat.Pow(Radius, 3);
 
         /// <summary>
         /// Represents body density.
         /// <para/>
-        /// Unit: kg/m³
+        /// <b>Unit</b>: kg/m³
         /// </summary>
         public BigFloat Density => Mass / Volume;
 
         /// <summary>
         /// Represents gravitational acceleration on surface of the body.
         /// <para/>
-        /// Unit: m/s²
+        /// <b>Unit</b>: m/s²
         /// </summary>
         public BigFloat GravitationalAccelerationOnSurface => CalculateGravitationalAcceleration(Radius);
 
@@ -102,7 +102,7 @@ namespace UniverseSharp
         /// <summary>
         /// Returns gravitational acceleration at a given height from the center of the body.
         /// <para/>
-        /// Unit: m/s²
+        /// <b>Unit</b>: m/s²
         /// </summary>
         /// <param name="height">Height in meters from center of the body.</param>
         public BigFloat CalculateGravitationalAcceleration(BigFloat height)
@@ -118,7 +118,7 @@ namespace UniverseSharp
         /// <summary>
         /// Returns gravitational force between two celestial bodies.
         /// <para/>
-        /// Unit: N
+        /// <b>Unit</b>: N
         /// </summary>
         /// <param name="secondBody">Second body to calculate gravitational force.</param>
         /// <param name="distance">Distance between bodies in meters.</param>
