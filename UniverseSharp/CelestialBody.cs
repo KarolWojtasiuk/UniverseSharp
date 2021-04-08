@@ -114,5 +114,22 @@ namespace UniverseSharp
 
             return Universe.GravitationalConstant * Mass / BigFloat.Pow(height, 2);
         }
+
+        /// <summary>
+        /// Returns gravitational force between two celestial bodies.
+        /// <para/>
+        /// Unit: N
+        /// </summary>
+        /// <param name="secondBody">Second body to calculate gravitational force.</param>
+        /// <param name="distance">Distance between bodies in meters.</param>
+        public BigFloat CalculateGravitationalForce(CelestialBody secondBody, BigFloat distance)
+        {
+            if (distance <= 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(distance), "Value must be greater than 0.");
+            }
+
+            return Universe.GravitationalConstant * (Mass * secondBody.Mass / (BigFloat.Pow(distance, 2)));
+        }
     }
 }
